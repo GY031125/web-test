@@ -1,0 +1,449 @@
+.navbar {
+ display: flex;
+ justify-content: center;
+ padding: 10px 0;
+}
+
+.navbar-title img {
+ height: 30px;
+ margin-right: 20px;
+}
+
+.navbar-links {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+.nav-item {
+ margin-left: 10px;
+}
+
+.nav-link {
+ color: black;
+ text-decoration: none;
+ padding: 5px 10px;
+ display: block;
+}
+
+.nav-link.active  {
+ color: #007bff;
+ border-top: 2px solid #007bff;
+ background-color: rgba(230, 230, 230, 0.5);
+}
+
+
+.nav-link:hover {
+  color: #007bff;
+  border-top: 2px solid #007bff;
+  background-color: rgba(230, 230, 230, 0.5);
+  cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.login-container {
+    margin-left:500px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.login-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu button img.dropdown-icon {
+    margin-right: 10px;
+    height: 15px;
+    width: auto;
+}
+
+
+/*修改密码*/
+.changeModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 490px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.changeModal .modal-header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.modal-header2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.changeModal .modal-header2 h2 {
+  padding-left: 15px;
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.changeModal .close-button2 {
+  border: none;
+  background: none;
+  padding-right: 15px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.4em;
+  cursor: pointer;
+  outline: none;
+}
+
+.changeModal .close-button2:hover {
+  color: #333;
+}
+
+.modal-content {
+  width: 100%;
+  display: flex;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+  text-align: right;
+}
+
+.form-group label,
+.form-group2 label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-group2 input {
+  padding: 10px;
+  font-size:0.9em;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+}
+
+
+.modal-content2 {
+  width: 100%;
+  display: flex;
+  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group2{
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-button-container {
+  display: flex;
+  padding-left: 320px;
+  padding-top: 50px;
+}
+
+.change-button-container button {
+  padding: 10px 20px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:0.9em;
+}
+
+.cancel-btn {
+  background-color: white; /* 取消按钮的背景颜色 */
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  background-color: #007bff; /* 确定按钮的背景颜色 */
+  color: white;
+  border: none; /* 移除默认边框 */
+}
+
+.change-button-container button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的深蓝色背景 */
+}
+
+/*承诺书*/
+.modal {
+  display: none;
+  position: fixed; /* 固定在屏幕上 */
+  z-index: 1; /* 置于顶层 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 如果内容超出屏幕高度，则出现滚动条 */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); /* 黑色背景且有透明度 */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button{
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#disagreeButton {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.modal-content > :not(.button-group) {
+  width: 100%;
+  text-align: center;
+}
+
+/*正文*/
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.background-container {
+    background-image: url('/web/images/judge-back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: auto;
+    width: 100%;
+}
+
+.content-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 200px;
+}
+
+.header-container h1 {
+    margin: 20px;
+    padding: 20px 30px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-label {
+    font-size: 1.1em;
+}
+
+.form-input,
+.form-select {
+    font-size: 1em;
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+
+.work-list {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin: 20px 0;
+}
+
+.work-list th,
+.work-list td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.work-list th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr td:nth-child(3),
+thead tr th:nth-child(3) {
+    padding: 0;
+    margin: 0;
+}
+
+.score-button {
+  background-color: #fff;
+  color: #007bff;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.pagination-item,
+.pagination-pages,
+.pagination-goto {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.pagination-item.total {
+    cursor: default; /* 鼠标悬停时不显示手指指针，表示不可点击 */
+}
+
+.pagination-pages{
+    cursor: pointer; /* 鼠标悬停时显示手指指针，表示可点击 */
+    background-color: #007bff;
+    padding: 10px 15px;
+    border: none;
+}
+
+.pagination-item.prev,
+.pagination-item.next {
+    background-color: #f8f9fa; /* 浅灰色背景，表示未激活状态 */
+}
+
+.pagination-item.prev:hover,
+.pagination-item.next:hover {
+    background-color: #007bff; /* 蓝色背景，表示激活状态 */
+    color: #fff; /* 白色字体 */
+}
+
+.pagination-goto {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.goto-page-input {
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    position: relative; /* 为伪元素设置定位上下文 */
+    margin-bottom: 20px; /* 在.footer-info下方添加一些空间用于伪元素 */
+}
+
+.footer-info::after {
+    content: '';
+    position: absolute;
+    left: 0; /* 从左侧开始 */
+    bottom: -10px;
+    width: 100%; /* 伪元素宽度与.footer-info相同 */
+    height: 1px; /* 横线的高度 */
+    background-color: #888; /* 横线的颜色 */
+}
+
+.footer-domain {
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.footer-domain p {
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}

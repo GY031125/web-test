@@ -1,0 +1,521 @@
+.navbar {
+ display: flex;
+ justify-content: center;
+ padding: 10px 0;
+}
+
+.navbar-title img {
+ height: 30px;
+ margin-right: 20px;
+}
+
+.navbar-links {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+.nav-item {
+ margin-left: 10px;
+}
+
+.nav-link {
+ color: black;
+ text-decoration: none;
+ padding: 5px 10px;
+ display: block;
+}
+
+.nav-link.active  {
+ color: #007bff;
+ border-top: 2px solid #007bff;
+ background-color: rgba(230, 230, 230, 0.5);
+}
+
+
+.nav-link:hover {
+  color: #007bff;
+  border-top: 2px solid #007bff;
+  background-color: rgba(230, 230, 230, 0.5);
+  cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.login-container {
+    margin-left:500px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.login-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu button img.dropdown-icon {
+    margin-right: 10px;
+    height: 15px;
+    width: auto;
+}
+
+
+/*修改密码*/
+.changeModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 490px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.changeModal .modal-header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.modal-header2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.changeModal .modal-header2 h2 {
+  padding-left: 15px;
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.changeModal .close-button2 {
+  border: none;
+  background: none;
+  padding-right: 15px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.4em;
+  cursor: pointer;
+  outline: none;
+}
+
+.changeModal .close-button2:hover {
+  color: #333;
+}
+
+.modal-content {
+  width: 100%;
+  display: flex;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+  text-align: right;
+}
+
+.form-group label,
+.form-group2 label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-group2 input {
+  padding: 10px;
+  font-size:0.9em;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+}
+
+
+.modal-content2 {
+  width: 100%;
+  display: flex;
+  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group2{
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-button-container {
+  display: flex;
+  padding-left: 320px;
+  padding-top: 50px;
+}
+
+.change-button-container button {
+  padding: 10px 20px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:0.9em;
+}
+
+.cancel-btn {
+  background-color: white; /* 取消按钮的背景颜色 */
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  background-color: #007bff; /* 确定按钮的背景颜色 */
+  color: white;
+  border: none; /* 移除默认边框 */
+}
+
+.change-button-container button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的深蓝色背景 */
+}
+
+/* 底部 */
+footer {
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    position: relative; /* 为伪元素设置定位上下文 */
+    margin-bottom: 20px; /* 在.footer-info下方添加一些空间用于伪元素 */
+}
+
+.footer-info::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #888;
+}
+
+.footer-domain {
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.footer-domain p {
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+/* 填写作品信息 */
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.content-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* 隐藏溢出的内容 */
+    background-color: #fff;
+    padding: 20px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 400px;
+    margin-top: 40px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 调整按钮样式，使其看起来更像标题 */
+.button.inactive{
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 200px;
+}
+
+/* 表单标题样式 */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 600px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.radio-group {
+    width: 50%;
+    box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+    padding-right: 10px;
+}
+
+/* 调整.radio-item的样式，使其能够包含多行 */
+.radio-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* 调整.first-row，使其能够包含两组单选按钮，每组一行 */
+.first-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 每个单选按钮的label的样式 */
+.radio-group label {
+    white-space: normal;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.upload-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* 确保边框不会因内容溢出而断裂 */
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-panel {
+    flex: 0 0 20%;
+    border-right: 1px solid #ddd; /* 与右侧面板分隔线 */
+}
+
+.header-title h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.right-panel {
+    flex: 1; /* 右侧占据剩余空间 */
+    padding: 20px;
+}
+
+.instructions {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.teams {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.upload-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upload-button {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: white;
+    color: #333;
+    border: solid #F5F5F5;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.upload-button:hover {
+    background-color: #999;
+}
+
+/* 隐藏实际的文件输入框 */
+.file-input {
+    display: none;
+}
+
+.group + .group {
+    border-top: 1px solid #ddd;
+}
+
+/* 确保最后一个团队没有底部外边距 */
+.group:last-child {
+    margin-bottom: 0;
+}
+
+.upload-sections {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* 教案上传区域的样式 */
+.upload-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 5px 10px;
+    color: blue;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+
+.instruction2 {
+    margin-top: 5px;
+    color: #666;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}
+
+/* 显示错误消息的逻辑，当文件选择不合法 */
+.file-input:invalid + .upload-label + .instruction + .error-message {
+    display: block;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    padding: 10px;
+    font-size: 1.5em;
+    width: 200px;
+}
+
+.action-container {
+    display: flex;
+    justify-content: center;
+}
+
+.upload-wrapper {
+    display: none;
+}

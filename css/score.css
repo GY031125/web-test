@@ -1,0 +1,413 @@
+.navbar {
+ display: flex;
+ justify-content: center;
+ padding: 10px 0;
+}
+
+.navbar-title img {
+ height: 30px;
+ margin-right: 20px;
+}
+
+.navbar-links {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+.nav-item {
+ margin-left: 10px;
+}
+
+.nav-link {
+ color: black;
+ text-decoration: none;
+ padding: 5px 10px;
+ display: block;
+}
+
+.nav-link.active  {
+ color: #007bff;
+ border-top: 2px solid #007bff;
+ background-color: rgba(230, 230, 230, 0.5);
+}
+
+
+.nav-link:hover {
+  color: #007bff;
+  border-top: 2px solid #007bff;
+  background-color: rgba(230, 230, 230, 0.5);
+  cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.login-container {
+    margin-left:500px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.login-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu button img.dropdown-icon {
+    margin-right: 10px;
+    height: 15px;
+    width: auto;
+}
+
+
+/*修改密码*/
+.changeModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 490px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.changeModal .modal-header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.modal-header2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.changeModal .modal-header2 h2 {
+  padding-left: 15px;
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.changeModal .close-button2 {
+  border: none;
+  background: none;
+  padding-right: 15px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.4em;
+  cursor: pointer;
+  outline: none;
+}
+
+.changeModal .close-button2:hover {
+  color: #333;
+}
+
+.modal-content {
+  width: 100%;
+  display: flex;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+  text-align: right;
+}
+
+.form-group label,
+.form-group2 label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-group2 input {
+  padding: 10px;
+  font-size:0.9em;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+}
+
+
+.modal-content2 {
+  width: 100%;
+  display: flex;
+  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group2{
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-button-container {
+  display: flex;
+  padding-left: 320px;
+  padding-top: 50px;
+}
+
+.change-button-container button {
+  padding: 10px 20px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:0.9em;
+}
+
+.cancel-btn {
+  background-color: white; /* 取消按钮的背景颜色 */
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  background-color: #007bff; /* 确定按钮的背景颜色 */
+  color: white;
+  border: none;
+}
+
+.change-button-container button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的深蓝色背景 */
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    position: relative; /* 为伪元素设置定位上下文 */
+    margin-bottom: 20px; /* 在.footer-info下方添加一些空间用于伪元素 */
+}
+
+.footer-info::after {
+    content: '';
+    position: absolute;
+    left: 0; /* 从左侧开始 */
+    bottom: -10px;
+    width: 100%; /* 伪元素宽度与.footer-info相同 */
+    height: 1px; /* 横线的高度 */
+    background-color: #888; /* 横线的颜色 */
+}
+
+.footer-domain {
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.footer-domain p {
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+/*正文*/
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.content-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper:last-child {
+    margin-bottom: 200px; /* 最后一个容器的间距 */
+}
+
+.breadcrumb-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-nav ul li {
+    position: relative;
+}
+
+.breadcrumb-nav ul li:not(.no-separator)::after {
+    content: '>'; /* 在除了带有.no-separator类的li之外的每个li后面添加'>' */
+    margin: 0 8px;
+    color: #333;
+}
+
+.breadcrumb-nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.work-display h2 {
+    font-size: 2em;
+}
+
+.work-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.document-group, .download-group {
+    display: flex;
+    align-items: center;
+}
+
+.document-icon, .download-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* 图片之间的间距 */
+}
+
+.download-link {
+    text-decoration: none; /* 去除下划线 */
+    color: #ccc;
+}
+
+.download-link:hover {
+    color: #007bff;
+}
+
+.document-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.document-list th, td {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: right;
+}
+
+.review-section h2 {
+    font-size: 1.3em;
+}
+
+.reviewForm {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.reviewForm th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.reviewForm th {
+    white-space: nowrap; /* 防止内容自动换行 */
+    padding: 15px;
+    background: #f2f2f2;
+}
+
+.reviewForm td {
+    padding: 25px 20px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.input-score {
+    height: 20px;
+    width: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* 防止输入框宽度超过单元格 */
+    text-align: center; /* 输入框文本居中*/
+}
+
+.reviewComment {
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+.review-button {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 10px;
+}
+
+.review-button input {
+    background-color: #007bff; /* 确定按钮的背景颜色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:0.9em;
+}

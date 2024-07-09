@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>评审页面</title>
+   <link rel="stylesheet" href="/css/judge.css">
+</head>
+<body>
+   <header>
+       <nav class="navbar">
+           <div class="navbar-title">
+                   <img src="/images/city-school-contest.png" alt="某市职业学校教学能力大赛">
+           </div>
+           <ul class="navbar-links">
+               <li class="nav-item "><a href="index.html" class="nav-link ">首页</a></li>
+               <li class="nav-item"><a href="describe.html" class="nav-link">比赛指南</a></li>
+               <li id="judgeLink" class="nav-item"><a href="#" class="nav-link active">进入专家评审</a></li>
+           </ul>
+           <div class="login-container">
+            <div class="user-info">
+                <img src="/images/user-img.png" alt="用户头像" class="user-avatar">
+                <span class="user-name">用户名</span>
+                <span class="toggle-button" onclick="toggleDropdown()">...</span>
+            </div>
+               <div class="dropdown-menu" style="display:none;">
+                    <button class="quit" onclick="logout()">
+                        <img src="/images/logout.png" alt="退出登录" class="dropdown-icon">
+                            退出登录
+                    </button>
+                    <button onclick="showModal('changeModal')">
+                    <img src="/images/change-password.png" alt="修改密码" class="dropdown-icon">
+                        修改密码
+                    </button>
+                </div>
+            </div>
+       </nav>
+   </header>
+
+   <main>
+    <div class="container">
+        <div class="content-wrapper">
+        <div class="background-container">
+            <div class="header-container">
+                <h1 class="title">专家评审您好！<br>您评审的分类为：xxxx</h1>
+            </div>
+        </div>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="workName" class="form-label">作品名称</label>
+                    <input type="text" id="workName" name="workName" class="form-input" placeholder="请输入作品名称" required>
+                    <label for="status" class="form-label">状态</label>
+                    <select id="status" name="status" class="form-select">
+                        <option value="all">全部</option>
+                        <option value="pending">待评审</option>
+                        <option value="reviewed">已评审</option>
+                    </select>
+                </div>
+            </form>
+            <table class="work-list">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>作品名称</th>
+                        <th>提交时间</th>
+                        <th>得分</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>我叫MT</td>
+                        <td>2023-11-23 15:10:07</td>
+                        <td>
+                            <span style="color: red">未评分</span>
+                        </td>
+                        <td>
+                            <button class="score-button">评分</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span class="pagination-item total">共1条</span>
+                <button class="pagination-item prev"><</button>
+                <button class="pagination-pages">1</button>
+                <button class="pagination-item next">></button>
+                <div class="pagination-goto">
+                    前往：<input type="text" class="goto-page-input" min="1" value="1"> 页
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+   <footer>
+  <!-- 底部内容 -->
+      <div class="footer-container">
+          <div class="footer-info">
+              <div class="footer-item">联系电话: 王老师 15853217870</div>
+              <div class="footer-item">|</div>
+              <div class="footer-item">技术支持: 唐工 17706521231</div>
+              <div class="footer-item">|</div>
+              <div class="footer-item">服务电话: 朱老师 15966818040</div>
+              <div class="footer-item">|</div>
+              <div class="footer-item">@山东依智科技产业开发集团有限公司 @2023鲁ICP备2020045516号-3</div>
+           </div>
+          <div class="footer-domain">
+           <p>Copyright © 2003-2023 zhuhuijiaoxue.All rights reserved.</p>
+          </div>
+      </div>
+   </footer>
+
+    <!-- 修改密码模态框 -->
+    <div class="changeModal" id="changeModal">
+    <div class="modal-header2">
+        <h2>修改密码！</h2>
+        <button class="close-button2" onclick="closeModal2()">x</button>
+    </div>
+
+    <div class="modal-content2">
+        <form id="changeForm">
+            <div class="form-group2">
+                <label for="old-password"><span style="color: red">* </span> 旧密码:</label>
+                <input type="text" id="old-password" placeholder="旧密码" required>
+                <span id="old-passwordError" style="color: red; display: none;"></span>
+            </div>
+            <div class="form-group2">
+                <label for="newpassword"><span style="color: red">* </span> 新密码:</label>
+                <input type="password" id="newpassword" placeholder="请输入新密码" required>
+                <span id="newpasswordError" style="color: red; display: none;"></span>
+            </div>
+            <div class="form-group2">
+                <label for="newpassword2"><span style="color: red">* </span> 新密码:</label>
+                <input type="password" id="newpassword2" placeholder="请再次输入新密码" required>
+                <span id="newpassword2Error" style="color: red; display: none;"></span>
+            </div>
+            <div class="change-button-container">
+                <button type="button" class="cancel-btn" onclick="closeModal2()">取消</button>
+                <button type="submit" class="confirm-btn">确定</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <!-- 承诺书模态框示例 -->
+    <div id="commitmentModal" class="modal">
+      <div class="modal-content">
+          <h1>承诺书</h1>
+          <p>这里是承诺书的内容...</p>
+          <div class="button-group">
+              <button id="agreeButton">我已阅读并同意</button>
+              <button id="disagreeButton">不同意</button>
+          </div>
+    </div>
+    </div>
+
+   <!-- 引入JavaScript文件 -->
+   <script src="/js/judge.js"></script>
+
+</body>
+</html>

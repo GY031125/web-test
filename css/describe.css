@@ -1,0 +1,321 @@
+.navbar {
+ display: flex;
+ justify-content: center; /* 垂直居中对齐子元素 */
+ padding: 10px 0; /* 上下内边距 */
+}
+
+.navbar-title img {
+ height: 30px;
+ margin-right: 20px; /* 与导航链接之间的间隔 */
+}
+
+.navbar-links {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex; /* 导航链接使用Flexbox进行水平布局 */
+}
+
+.nav-item {
+ margin-left: 10px; /* 导航项之间的间隔 */
+}
+
+.nav-link {
+ color: black;
+ text-decoration: none; /* 移除下划线 */
+ padding: 5px 10px; /* 内边距，使点击区域更大 */
+ display: block; /* 使链接块级显示 */
+}
+
+.nav-link.active  {
+ color: #007bff; /* 被选中的导航链接文字颜色为蓝色 */
+ border-top: 2px solid #007bff;
+ background-color: rgba(230, 230, 230, 0.5);
+}
+
+/* 可选：为鼠标悬停时的链接添加样式 */
+.nav-link:hover {
+  color: #007bff;
+  border-top: 2px solid #007bff;
+  background-color: rgba(230, 230, 230, 0.5);
+  cursor: pointer; /* 鼠标悬停时改变鼠标样式为手形 */
+}
+
+.login-container {
+  margin-left:500px; /* 将登录按钮推到最右边 */
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white; /* 文本颜色 */
+  border: none; /* 移除边框 */
+  padding: 8px; /* 内边距 */
+  width: 50px;
+  text-align: center; /* 文本居中 */
+  text-decoration: none; /* 移除下划线 */
+  display: inline-block; /* 设置为内联块级元素 */
+  font-size: 12px; /* 字体大小 */
+  margin: 4px 2px; /* 外边距 */
+  border-radius: 8px; /* 边框圆角 */
+}
+
+.login-button:hover {
+  background-color: white; /* 鼠标悬停时的背景色 */
+  color: #007bff; /* 文本颜色 */
+  border: none; /* 移除边框 */
+}
+/*登录*/
+.loginModal {
+       display: none;
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background: white;
+       padding: 20px;
+       border-radius: 5px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   }
+
+/*登录 、修改密码*/
+.loginModal,
+.changeModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 490px;/* 增加宽度 */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.loginModal .modal-header,
+.changeModal .modal-header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* 确保标题和关闭按钮能够填满整个header的宽度 */
+  padding-top: 15px; /* 为标题提供上边距，使其与模态框顶部保持一定距离 */
+  position: relative; /* 允许伪元素相对于header定位 */
+  margin-bottom: 40px; /* 头部和表单内容之间的间隔 */
+}
+
+.modal-header::after,
+.modal-header2::after {
+  /* 使用::after伪元素来绘制横线 */
+  content: ''; /* 伪元素内容为空 */
+  position: absolute; /* 绝对定位 */
+  bottom: -10px; /* 离底部的距离*/
+  left: 0; /* 从左边开始 */
+  width: 100%; /* 横跨整个modal-header宽度 */
+  height: 1px; /* 横线的高度 */
+  background-color: #ccc; /* 横线的颜色 */
+}
+
+.loginModal .modal-header h2,
+.changeModal .modal-header2 h2 {
+  padding-left: 15px; /* 为标题提供左边距 */
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.loginModal .close-button,
+.changeModal .close-button2 {
+  border: none;
+  background: none;
+  padding-right: 15px; /* 为标题提供左边距 */
+  cursor: pointer; /* 鼠标悬停时变为手指形状，表示可点击 */
+  color: #aaa;
+  font-size: 1.4em;
+  cursor: pointer;
+  outline: none;
+}
+
+.loginModal .close-button:hover,
+.changeModal .close-button2:hover {
+  color: #333;
+}
+
+.modal-content {
+  width: 100%; /* 确保内容区域填满模态框的宽度 */
+  display: flex;
+  padding-bottom: 60px;
+  flex-direction: column; /* 垂直排列子元素（在这里主要是form和它的子元素） */
+  align-items: center; /* 在交叉轴上居中对齐子元素（这里主要是为了让表单元素水平居中） */
+}
+
+.form-group {
+  margin-bottom: 25px; /* 每个表单组之间的间隔 */
+  position: relative; /* 如果需要相对于表单组定位按钮或其他元素 */
+  text-align: right; /* 将表单组内的内容（包括标签和输入框）向右对齐 */
+}
+
+.form-group label,
+.form-group2 label {
+  display: inline-block; /* 使标签成为内联块级元素，以便可以设置宽度 */
+  margin-right: 10px; /* 标签和输入框之间的间隔 */
+}
+
+.form-group input,
+.form-group2 input {
+  padding: 10px; /* 输入框的内边距 */
+  font-size:0.9em; /* 字体大小 */
+  flex-shrink: 0; /* 防止输入框在必要时缩小 */
+  border: 1px solid #ccc;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  /* 如果需要，也可以添加一些额外的内边距或外边距来调整位置 */
+  justify-content: flex-end; /* 子元素（在这个例子中是按钮）向右对齐 */
+}
+
+.login-button-container button {
+  padding: 10px 20px; /* 按钮的内边距 */
+  border: none; /* 移除默认边框 */
+  border-radius: 5px; /* 圆角边框 */
+  cursor: pointer; /* 鼠标悬停时变为手指形状，表示可点击 */
+  background-color: #007bff; /* 蓝色背景 */
+  color: white; /* 白色文字 */
+  font-size:0.9em; /* 字体大小 */
+  width: 198px;
+}
+
+.login-button-container button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的深蓝色背景 */
+}
+
+/*修改密码*/
+.modal-content2 {
+  width: 100%; /* 确保内容区域填满模态框的宽度 */
+  display: flex;
+  padding-bottom: 30px;
+  flex-direction: column; /* 垂直排列子元素（在这里主要是form和它的子元素） */
+  align-items: center; /* 在交叉轴上居中对齐子元素（这里主要是为了让表单元素水平居中） */
+}
+
+.form-group2{
+  margin-bottom: 25px; /* 每个表单组之间的间隔 */
+  display: flex; /* 启用Flexbox */
+  position: relative; /* 如果需要相对于表单组定位按钮或其他元素 */
+  align-items: center;
+  justify-content: center; /*在主轴上居中对齐*/
+}
+
+.change-button-container {
+  display: flex;
+  padding-left: 320px;
+  padding-top: 50px;
+}
+
+.change-button-container button {
+  padding: 10px 20px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:0.9em;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.change-button-container button:hover {
+  background-color: #0056b3;
+}
+
+/*正文*/
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.6em;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+    padding: 0;
+    margin-top: 40px;
+    font-size: 1em;
+}
+
+p {
+    line-height: 30px;
+    font-size: 1em;
+}
+
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-info::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #888;
+}
+
+.footer-domain {
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.footer-domain p {
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}
